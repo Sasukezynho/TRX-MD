@@ -1,6 +1,6 @@
 const {Module} = require('../main');
 const FilterDb = require('./sql/filters');
-Module({pattern: 'filter ?(.*)', fromMe: true, desc: "Adds filter in chat", dontAddCommandList: true}, (async (message, match) => {
+Module({pattern: 'ft ?(.*)', fromMe: true, desc: "Adds filter in chat", dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (message.reply_message.text) {
         await FilterDb.setFilter(message.jid, match[0].replace(/['"“]+/g, ''), message.reply_message.text, match[0][0] === "'" ? true : false);
@@ -10,7 +10,7 @@ Module({pattern: 'filter ?(.*)', fromMe: true, desc: "Adds filter in chat", dont
     if (match === null) {
         filtreler = await FilterDb.getFilter(message.jid);
         if (filtreler === false) {
-            await message.client.sendMessage(message.jid,{text: "_No filters found in this chat ❌_"})
+            await message.client.sendMessage(message.jid,{text: "_❌_"})
         } else {
             var mesaj = "_Your filters in this chat:_" + '\n';
             filtreler.map((filter) => mesaj += '```' + filter.dataValues.pattern + '```\n');
@@ -18,24 +18,24 @@ Module({pattern: 'filter ?(.*)', fromMe: true, desc: "Adds filter in chat", dont
         }
     } else {
         if (match.length < 2) {
-            return await message.client.sendMessage(message.jid,{text: "Wrong format" + ' ```.filter "input" "output"'});
+            return await message.client.sendMessage(message.jid,{text: "Wrong format" + ' ```.ft "input" "output"'});
         }
         await FilterDb.setFilter(message.jid, match[0].replace(/['"“]+/g, ''), match[1].replace(/['"“]+/g, '').replace(/[#]+/g, '\n'), match[0][0] === "'" ? true : false);
-        await message.client.sendMessage(message.jid,{text: "Successfully set "+match[0].replace(/['"]+/g, '')});
+        await message.client.sendMessage(message.jid,{text: "```Done✅```"+match[0].replace(/['"]+/g, '')});
     }
 }));
-Module({pattern: 'stop ?(.*)', fromMe: true, desc: "Deletes a filter", dontAddCommandList: true}, (async (message, match) => {
+Module({pattern: 'sp ?(.*)', fromMe: true, desc: "Deletes a filter", dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (match === null) {
-        return await message.client.sendMessage(message.jid,{text:"Wrong format!" + '\n*Example:* ```.stop "hello"```'})
+        return await message.client.sendMessage(message.jid,{text:"Wrong format!" + '\n*Example:* ```.sp "hello"```'})
     }
 
     del = await FilterDb.deleteFilter(message.jid, match[0].replace(/['"“]+/g, ''));
     
     if (!del) {
-        await message.client.sendMessage(message.jid,{text: "There are already no filters like this ❌"})
+        await message.client.sendMessage(message.jid,{text: "❌"})
     } else {
-        await message.client.sendMessage(message.jid,{text:"_Successfully deleted filter ✅_"})
+        await message.client.sendMessage(message.jid,{text:"```Done✅```"})
     }
 }));
 Module({on: 'text', fromMe: false}, (async (message, match) => {

@@ -1,4 +1,4 @@
-# Raganork-multi-device
+# TRX-multi-device
 ## Simple multi device whatsapp bot. This bot is currently under testing. You can be a beta tester by deploying!
 <!---## Readme first before using 👇❌
 ### (Due to the removal of heroku-github integration, this project is currently unable to deploy to heroku servers. As of this, existing users also couldn't update their bots.)

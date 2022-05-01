@@ -12,7 +12,7 @@ Visit [Heroku status site](https://status.heroku.com) for more details
 <div>
 <br>
   
-<a href="https://heroku.com/deploy?template=https://github.com/COOlpamod/TRX-MD-DEPLOY" target="blank"><img align="center" src="https://i.imgur.com/gtK4XLX.png" alt="Deploy bot" height="112" width="310" /></a>
+<a href="https://heroku.com/deploy?template=https://github.com/COOlpamod/TRX-MD-DEPLOY" target="blank"><img align="center" src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy bot" height="112" width="310" /></a>
   <div>
 
 

@@ -20,7 +20,7 @@ module.exports = {
     TAKE_KEY: process.env.TAKE_KEY === undefined ? '' : process.env.TAKE_KEY,
     MODE: process.env.MODE === undefined ? 'public' : process.env.MODE,
     WARN: process.env.WARN === undefined ? '3' : process.env.WARN,
-    ANTILINK_WARN: process.env.WARN === undefined ? '' : process.env.WARN,
+    ANTILINK_WARN: process.env.WARN === undefined ? '3' : process.env.WARN,
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
         API_KEY: process.env.HEROKU_API_KEY === undefined ? '' : process.env.HEROKU_API_KEY,

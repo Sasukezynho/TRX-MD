@@ -10,8 +10,8 @@ const templateButtons = [
 ]
 
 const buttonMessage = {
-    text: `Hello ${message.data.pushName}, type .list for commands`,
-    footer: 'Hey',
+    text: `Hello ${message.data.pushName}, type .panel for commands`,
+    footer: 'TRX-MD',
     templateButtons: templateButtons
 }
 

@@ -18,7 +18,7 @@ const buttonMessage = {
 await message.client.sendMessage(message.jid, buttonMessage)
 }))
 Module({on: 'button', fromMe: w, desc: 'Is bot alive?'}, (async (message, match) => {
-if (message.tembutton === 'mdcmd') await message.sendReply('Type .list for commands!');
+if (message.tembutton === 'mdcmd') await message.sendReply('Type .panel for commands!');
 	if (message.tembutton === 'mdmenu') await message.sendReply('Menu will appear here!')
  
 }))

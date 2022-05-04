@@ -8,20 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/souravkl11/raganork-md.git"
+    "url": "git+https://github.com/COOlpamod/TRX-MD.git"
   },
   "keywords": [
     "whatsapp",
     "bot",
     "multi-device"
   ],
-  "author": "Sourav",
-  "developer": "@souravkl11",
+  "author": "COOLpamod",
+  "developer": "@COOLpamod",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/souravkl11/raganork-md/issues"
   },
-  "homepage": "https://github.com/souravkl11/raganork-md#readme",
+  "homepage": "https://github.com/COOlpamod/TRX-MD#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "@adiwajshing/baileys": "^4.1.0",

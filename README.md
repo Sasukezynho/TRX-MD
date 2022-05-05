@@ -1,8 +1,8 @@
 
 # TRX-MD
 
-#1. scan Qr and get user name & passwore
-#2. deploy
+1. scan Qr and get user name & password
+2. deploy
 <a href="https://raganork-qr.herokuapp.com/api/raganork-qr"><img align="center" src="https://i.imgur.com/BpjFaNK.png" alt="Scan QR" height="180" width="300" /></a>
 <br>
 <div>

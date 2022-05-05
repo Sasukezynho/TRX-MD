@@ -1,4 +1,4 @@
-<div align="center">
+
 # TRX-MD
 
 #1. scan Qr and get user name & passwore

@@ -8,7 +8,7 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './bot.db' : process.env
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 module.exports = {
     VERSION: 'V0.0.6',
-    ALIVE: process.env.ALIVE === undefined ? "{image/https://i.ibb.co/ymTz1Ss/trx.png} 𝙄'𝙢 𝙖𝙡𝙞𝙫𝙚 \n ```Type .panel to get commands``` " : process.env.ALIVE,
+    ALIVE: process.env.ALIVE === undefined ? "{image/https://i.ibb.co/ymTz1Ss/trx.png} 𝙄'𝙢 𝙖𝙡𝙞𝙫𝙚 \n ```Type Panel to get commands``` " : process.env.ALIVE,
     BLOCK_CHAT: process.env.BLOCK_CHAT === undefined ? "" : process.env.BLOCK_CHAT,
     READ_MESSAGES: process.env.READ_MESSAGES === undefined ? false : convertToBool(process.env.READ_MESSAGES),
     READ_COMMAND: process.env.READ_COMMAND === undefined ? true : convertToBool(process.env.READ_COMMAND),

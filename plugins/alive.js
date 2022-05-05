@@ -2,15 +2,15 @@ const {Module} = require('../main')
 const {MODE,ALIVE} = require('../config');
 const {parseAlive} = require('./misc/misc');
 let w = MODE=='public'?false:true
-Module({pattern: 'menu', fromMe: w, desc: 'Is bot alive?'}, (async (message, match) => {
+Module({pattern: 'panel', fromMe: w, desc: 'Get Commands'}, (async (message, match) => {
 const templateButtons = [
   {index: 1, urlButton: {displayText: 'Github', url: 'https://github.com/COOlpamod/TRX-MD'}},
-  {index: 2, quickReplyButton: {displayText: 'MENU', id: 'mdmenu'}},
-  {index: 3, quickReplyButton: {displayText: 'COMMANDS', id: 'mdcmd'}}
+  {index: 2, quickReplyButton: {displayText: '❤️', id: 'mdmenu'}},
+  {index: 3, quickReplyButton: {displayText: '👍', id: 'mdcmd'}}
 ]
 
 const buttonMessage = {
-    text: `Hello ${message.data.pushName}, type Panel for commands(❌without .)`,
+    text: `Hello ${message.data.pushName} .)`,
     footer: 'TRX-MD',
     templateButtons: templateButtons
 }
@@ -18,8 +18,8 @@ const buttonMessage = {
 await message.client.sendMessage(message.jid, buttonMessage)
 }))
 Module({on: 'button', fromMe: w, desc: 'Is bot alive?'}, (async (message, match) => {
-if (message.tembutton === 'mdcmd') await message.sendReply('Type Panel for commands!(❌without .)');
-	if (message.tembutton === 'mdmenu') await message.sendReply('Menu will appear here!')
+if (message.tembutton === 'mdcmd') await message.sendReply('👀');
+	if (message.tembutton === 'mdmenu') await message.sendReply('👀')
  
 }))
 Module({pattern: 'alive', fromMe: w, desc: 'Is bot alive?'}, (async (message, match) => {
